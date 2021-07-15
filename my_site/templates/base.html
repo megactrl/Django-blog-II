@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{% endblock %}</title> 
+        <link rel="stylesheet" href="{% static "app.css" %}">
+        {% block css_file %}{% endblock %}
+    </head>
+    <body>
+        <header id="main-navigation">
+            <h1><a href="{% url "starting-page" %}">MegaCTRL' Blog</a></h1>
+            <nav>
+                <a href="{% url "post-page" %}">All Posts</a>
+            </nav>
+        </header>
+       {% block body %}
+       {% endblock %}
+        
+      
+    </body>
+</html>
